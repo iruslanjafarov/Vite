@@ -1,4 +1,5 @@
 import {defineConfig} from "vite";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
     base: "./",
@@ -12,4 +13,11 @@ export default defineConfig({
         open: true,
         hmr: true
     },
+    css: {
+        postcss: {
+            plugins: [
+                autoprefixer({})
+            ],
+        },
+    }
 });
